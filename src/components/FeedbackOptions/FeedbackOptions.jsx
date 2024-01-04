@@ -1,17 +1,18 @@
 import React from 'react';
+import { FeedbackButton, FeedbackList } from './Feedback.styled';
 
 export const FeedbackOptions = ({ options, onClick }) => {
   return (
-    <ul>
+    <FeedbackList>
       {options.map(elem => {
         return (
           <li key={elem}>
-            <button type="button" onClick={() => onClick(elem)}>
+            <FeedbackButton type="button" onClick={() => onClick(elem)}>
               {elem}
-            </button>
+            </FeedbackButton>
           </li>
         );
       })}
-    </ul>
+    </FeedbackList>
   );
 };

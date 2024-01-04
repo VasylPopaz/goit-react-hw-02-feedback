@@ -1,5 +1,6 @@
 import React from 'react';
+import { NotificationDescr } from './Notification.styled';
 
 export const Notification = ({ message }) => {
-  return <p>{message}</p>;
+  return <NotificationDescr>{message}</NotificationDescr>;
 };

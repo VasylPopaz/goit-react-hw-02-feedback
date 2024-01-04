@@ -1,9 +1,10 @@
 import React from 'react';
+import { StatisticsContainer, StatisticsList } from './Statistics.styled';
 
 export const Statistics = ({ options, total, positivePercentage }) => {
   return (
-    <div>
-      <ul>
+    <StatisticsContainer>
+      <StatisticsList>
         {options.map(([key, value]) => {
           return (
             <li key={key}>
@@ -13,9 +14,9 @@ export const Statistics = ({ options, total, positivePercentage }) => {
             </li>
           );
         })}
-      </ul>
+      </StatisticsList>
 
-      <ul>
+      <StatisticsList>
         <li>
           <p>
             Total: <span>{total}</span>
@@ -26,7 +27,7 @@ export const Statistics = ({ options, total, positivePercentage }) => {
             Positive feedback: <span>{positivePercentage}</span>
           </p>
         </li>
-      </ul>
-    </div>
+      </StatisticsList>
+    </StatisticsContainer>
   );
 };
